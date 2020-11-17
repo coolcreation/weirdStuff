@@ -1,0 +1,109 @@
+
+   
+<body><!DOCTYPE html>
+  <!-- Jeff  11/15/2020 -->
+  <html lang="en">
+  
+     <head>
+      <meta charset="utf-8">
+      <meta name="description" content="Making Grid Structure">
+      <meta name="keywords" content="Html, CSS, Grids">
+      <meta name="author" content="Jeff">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css?family=Stint+Ultra+Expanded" rel="stylesheet">
+      <link rel="stylesheet" href="css/style.css">
+      <title>Grid Structure</title>
+      </head>
+<div id="layout">
+  <aside class="aboveNav"></aside> 
+  <aside class="lBorder"></aside> 
+  <aside class="rBorder"></aside>
+  <aside class="belowNav"></aside>
+
+  <nav>
+    <ul class="container">
+        <li>Home</li>
+        <li>Profile</li>
+        <li class="search">
+            <input type="text" class="search-input" placeholder="Search">
+        </li>
+        <li>Logout</li>
+    </ul>
+</nav>
+
+<main>
+  <h2>Main Section!</h2>
+  <p>In many situations, you’d want to use Ajax-load-more or filters to dynamically display content on a page, so a 
+    grid-layout would be needed.
+    Image for post
+    Image for post
+    
+    For example, as part of our web presence overhaul for {code}, Open Source at Dell Technologies, we created a page for 
+    dynamically displaying posts based on filter and sorting options.
+    Image for post
+    Image for post
+    Projects can be viewed through page filtering or sorting.
+    
+    We created a grid layout so that posts could easily be appended without breaking the layout. In this tutorial, you’ll 
+    learn how to re-create this post grid.
+    Creating the responsive grid
+    
+  
+    All of our grid-items (columns) are wrapped with one row and one container.
+    
+    
+    Our container CSS sets the total max-width. Using display: flex, our grid-row stretches to the full size of the container.
+    
+    We use flex-flow: wrap to designate that child divs (our columns/grid-items) should wrap if they exceed the width of the row. 
+    Then, flex-flow: row means our grid-items will flex from left to right. If we used flex-flow: column, our child divs would 
+    flex from top down.
+    
+    
+    Then, we use justify-content: flex-start because we want our grid-items to line up next to each-other at the start of the row.
+    Creating the grid item
+    
+    Each grid-item should have identical height, so we set a height of 550px:
+    
+    On desktop views, we set a flex-basis of 20% for each grid-item. This means that 5 grid-items will display on the same level.
+    The 6th grid-item will wrap to the next “row” since we are using flex-wrap: wrap in our grid-row.
+ 
+    We only need a few media queries on our .grid-item. We just need to define the flex-basis on each desired screen-width.
+    
+    Based on the content within our grid-items, we used these media queries:
+    
+    On the smallest screen-width, we use a flex-basis of 100% to make our grid-item the full-width of the grid-row.
+    
+    With either approach, we only need to change the flex-basis for a few screen-widths to achieve a grid.
+    Cross-browser support
+    
+    View the full source code, which also includes the styles for the content in each grid-item and the hover/grow effects. 
+    Follow me on Twitter for more upcoming tutorials, like achieving a perfect page speed score in Google PageSpeed insights.</p>
+  <p>Paragraph2</p>
+  <p>Paragraph3</p>
+
+</main>
+
+<figure id="figA">A<img src="images/braided_150.jpg" alt="Picture A"></figure>
+<figure id="figB">B<img src="images/bread_150.jpg" alt="Picture B"></figure>
+<figure id="figC">
+  <h4>Who is the artist of this track?</h4>
+
+  <audio controls="controls">
+  <source src="media/unknown_music.mp3" type="audio/mp3" />
+  <source src="media/unknown_music.ogg" type="audio/ogg" />
+   
+  <p>Your browser doesn't support HTML5 audio</p>
+</audio>
+
+</figure>
+
+
+
+
+<footer>
+  <p><strong>Jeff's Weird Experiment</strong></p>
+</footer>
+
+</div>
+</body>
+</html>
